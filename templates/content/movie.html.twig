@@ -7,16 +7,17 @@
         {% if editmode %}
             {{ pimcore_relation("movies") }}
         {% else %}
-            {% set product = pimcore_relation("movies").element %}
-            {% if product %}
-                <h2>{{ product.name }}</h2>
+            {% set movie = pimcore_relation("movies").element %}
+        {#{{ dump(movie ) }}#}
+            {% if movie %}
+                <h2>{{ movie.name }}</h2>
                 <div class="content">
-                    {% if product.picture %}
-                        {{ product.picture.thumbnail("content").html|raw }}
+                    {% if movie.picture %}
+                        {{ movie.picture.thumbnail("content").html|raw }}
                     {% endif %}
                 </div>
                 <div class="content">
-                    {{ product.description|raw }}
+                    {{ movie.description|raw }}
                 </div>
             {% endif %}
         {% endif %}
