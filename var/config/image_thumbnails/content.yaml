@@ -1,0 +1,21 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    content:
+                        items: {  }
+                        medias: {  }
+                        name: content
+                        description: ''
+                        group: ''
+                        format: SOURCE
+                        quality: 85
+                        highResolution: null
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1695797673
+                        creationDate: 1695797556
+                        preserveAnimation: false
