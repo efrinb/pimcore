@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>EMS</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/ems.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <div class="ems-logo">
+            {{ pimcore_image("myImage") }}
+        </div>
+        <div class="header">
+            {% if not document is defined or not document %}
+                {% set document = pimcore_document(12) %}
+            {% endif %}
+            {% set navStartNode = document.getProperty('navigationRoot') %}
+            {% if not navStartNode is instanceof('\\Pimcore\\Model\\Document\\Page') %}
+                {% set navStartNode = pimcore_document(12) %}
+            {% endif %}
+
+            {% set mainNavigation = pimcore_build_nav({
+                active: document,
+                root: navStartNode
+            }) %}
+            {{ pimcore_render_nav(mainNavigation) }}
+        </div>
+        <div class="ems-home">
+            {{ block('content') }}
+        </div>
+    </body>
+</html>
