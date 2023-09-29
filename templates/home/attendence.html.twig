@@ -1,0 +1,28 @@
+{% extends 'layouts/homelayout.html.twig' %}
+{% block content %}
+    <div class="content">
+        {% if editmode %}
+            {{ pimcore_multiselect('pages', {
+                'width': 200,
+                'height': 100,
+                'store': [
+                    ['leave', 'Leave'],
+                    ['home', 'Home'],
+                ]
+            }) }}
+        {% else %}
+            <p>{{ 'This page is linked to' | trans }}
+                {% for pagesKey in pimcore_multiselect('pages').getData %}
+                    <span>
+            {{ pagesKey | trans }}
+        </span>
+                {% endfor %}
+                categories
+            </p>
+        {% endif %}
+    </div>
+
+    <div class="e-date">
+        {{ pimcore_snippet('footerSnippet') }}
+    </div>
+{% endblock %}

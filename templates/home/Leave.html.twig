@@ -1,0 +1,26 @@
+{% extends 'layouts/homelayout.html.twig' %}
+
+{% block content %}
+    <div class="content">
+        <div class="e-date">
+            <h2>{{ pimcore_input('leaveTaken') }}</h2>
+            <div class="leave-date">
+                {{ pimcore_date('myDate', {
+                    'format': 'd.m.Y',
+                    'outputFormat': '%d.%m.%Y'
+                })
+                }}
+            </div>
+            <div class="e-leave">
+                {{ pimcore_select('mySelect', {
+                    store: [
+                        ['sick-leave', 'Sick Leave'],
+                        ['earn-leave', 'Earn Leave'],
+                        ['paid-leave', 'Paid Leave']
+                    ]
+                }) }}
+            </div>
+        </div>
+    </div>
+    {{ pimcore_snippet('footerContent') }}
+{% endblock %}
