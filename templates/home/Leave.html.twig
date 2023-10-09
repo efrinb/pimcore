@@ -20,6 +20,16 @@
                     ]
                 }) }}
             </div>
+            <div class="ems-sal">
+                <h1>Employee Brick Data:</h1>
+                {% if editmode %}
+                    {{ pimcore_relation('mybrick') }}
+                {% else %}
+                    {% for mybrick in employeeBrick %}
+                        <p>{{ mybrick.employee }}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
         </div>
     </div>
     {{ pimcore_snippet('footerContent') }}
