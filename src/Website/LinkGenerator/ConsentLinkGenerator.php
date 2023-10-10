@@ -2,10 +2,7 @@
 
 namespace App\Website\LinkGenerator;
 
-
-use Pimcore\Model\DataObject;
 use Pimcore\Model\DataObject\ClassDefinition\LinkGeneratorInterface;
-use Pimcore\Model\DataObject\Concrete;
 
 class ConsentLinkGenerator implements LinkGeneratorInterface
 {
@@ -20,7 +17,6 @@ class ConsentLinkGenerator implements LinkGeneratorInterface
 
     protected function doGenerate(\Pimcore\Model\DataObject\Consent $object, array $params): string
     {
-        // Retrieve the employee name from the Employee object
         $employeeFname = $object->getFirstname();
         $employeeLname = $object->getLastname();
 

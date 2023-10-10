@@ -26,8 +26,11 @@ class HomeController extends FrontendController
     {
         $taskOject = DataObject\Myblock::getById(5);
         $structuredTable = $taskOject->getEmployee();
+        $id = Link::getById(23);
+        $link = $id->getHref();
         return $this->render('home/employee.html.twig',[
             'structuredTable'=>$structuredTable,
+            'link'=>$link
         ]);
     }
 
@@ -45,14 +48,11 @@ class HomeController extends FrontendController
     {
         $taskOject = DataObject\Myblock::getById(5);
         $task = $taskOject->getTask();
-        $id = Link::getById(23);
-        $link = $id->getHref();
-
         /*$salaryObject = DataObject\Consent::getById(9);
         $salary = $salaryObject->getStore();*/
         return $this->render('home/attendence.html.twig',[
             'task'=>$task,
-            'link'=>$link
+
             /*'salary'=> $salary,*/
         ]);
     }
@@ -121,13 +121,11 @@ class HomeController extends FrontendController
 
     public function lockFieldsAction(Request $request)
     {
-        $dataObject = DataObject\Myblock::getById($request->get('objectId'));
-        if ($dataObject instanceof DataObject\Myblock) {
-            $lockedFields = ['number', 'position'];
-            foreach ($lockedFields as $fieldName) {
-                $dataObject->getClass()->getFieldDefinition($fieldName)->setLocked(true);
-            }
-            $dataObject->save();
+        $dataObject = DataObject\Myblock::getById($request->get('Id'));
+        $fields = $dataObject->getFieldDefinitions();
+        foreach ($fields as $field) {
+            $field->setLocked(true);
         }
+        $dataObject->save();
     }
 }

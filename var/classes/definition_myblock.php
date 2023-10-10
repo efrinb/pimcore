@@ -9,6 +9,7 @@
  * -- name [input]
  * -- number [numeric]
  * -- position [input]
+ * -- empimage [image]
  * - localizedfields [localizedfields]
  * -- about [wysiwyg]
  * - pimcore [link]
@@ -23,7 +24,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1696852866,
+   'modificationDate' => 1696913386,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -183,6 +184,29 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'showCharCount' => false,
                  'width' => '',
                  'defaultValueGenerator' => '',
+              )),
+              3 => 
+              \Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+                 'name' => 'empimage',
+                 'title' => 'Empimage',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'fieldtype' => '',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'uploadPath' => '/employeeImages/e2.jpg',
+                 'width' => '',
+                 'height' => '',
               )),
             ),
              'layout' => NULL,

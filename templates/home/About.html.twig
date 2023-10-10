@@ -30,6 +30,16 @@
                 {% endfor %}
             {% endif %}
         </div>
+        <h2>{{ pimcore_input('employeeImages') }}</h2>
+        <section id="renderlet-gallery">
+            {{
+            pimcore_renderlet('myGallery', {
+                "controller" : "App\\Controller\\HomeController::myGalleryAction",
+                "title" : "Drag an asset folder here to get a gallery",
+                "height" : 400
+            })
+            }}
+        </section>
     </div>
     {{ pimcore_snippet('footerSnippet') }}
 {% endblock %}
