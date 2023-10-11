@@ -5,8 +5,10 @@ pimcore:
         language: en
         valid_languages:
             - en
+            - fr
         fallback_languages:
             en: ''
+            fr: ''
         default_language: en
         debug_admin_translations: false
     documents:

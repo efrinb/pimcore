@@ -2,6 +2,18 @@
 
 {% block content %}
     <div class="content">
+        <div class="asset-thumbnail">
+            {{ asset.getThumbnail('EMS').getHtml() | raw }}
+            {{ asset.getMetadata('link') }}
+            {{ dump(vdoAsset) }}
+{#            {{ vdoAsset.getThumbnail('aboutVideo')}}
+            {{ vdoAsset.getMetadata('about') }}#}
+            {#{% if vdoAsset is defined and vdoAsset %}
+                {{ pimcore_video(vdoAsset) }}
+            {% else %}
+                <p>Video not found or could not be loaded.</p>
+            {% endif %}#}
+        </div>
         {% for i in pimcore_block('contentblock').iterator %}
             <h2>{{ pimcore_input('subline') }}</h2>
             {{ pimcore_wysiwyg('content') }}

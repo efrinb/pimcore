@@ -20,8 +20,8 @@ class ConsentLinkGenerator implements LinkGeneratorInterface
         $employeeFname = $object->getFirstname();
         $employeeLname = $object->getLastname();
 
-        $url = '/consent/' . $employeeFname . '/' . $employeeLname;
+        $linkGeneratedUrl = '/consent/'. $employeeFname . '/' . $employeeLname;
 
-        return $url;
+        return $linkGeneratedUrl;
     }
 }

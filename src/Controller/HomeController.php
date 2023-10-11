@@ -7,7 +7,6 @@ use Pimcore\Model\Asset;
 use Pimcore\Model\DataObject;
 use Pimcore\Model\DataObject\TestCollection;
 use Pimcore\Model\DataObject\Service;
-use Pimcore\Model\Document\Editable\Block;
 use Pimcore\Model\Document\Link;
 use Symfony\Bridge\Twig\Attribute\Template;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,15 +21,22 @@ class HomeController extends FrontendController
         return [];
     }
 
+
+    #[Route('/consent/{employeeFname}/{employeeLname}', 'name=employee_preview')]
+    public function previewAction(Request $request)
+    {
+        $empData = DataObject\Consent::getById(9);
+        return $this->render('home/showempdata.html.twig',['empData'=>$empData]);
+    }
     public function employeeAction(Request $request)
     {
         $taskOject = DataObject\Myblock::getById(5);
         $structuredTable = $taskOject->getEmployee();
         $id = Link::getById(23);
-        $link = $id->getHref();
+        $employeeLink = $id->getHref();
         return $this->render('home/employee.html.twig',[
             'structuredTable'=>$structuredTable,
-            'link'=>$link
+            'link'=>$employeeLink,
         ]);
     }
 
@@ -41,19 +47,17 @@ class HomeController extends FrontendController
 
     public function documentAction (Request $request)
     {
-        return $this->render('home/document.html.twig');
+        $asset = Asset::getById(21);
+        $vdoAsset = Asset::getById(34);
+        return $this->render('home/document.html.twig',['asset'=>$asset, 'vdoAsset'=>$vdoAsset]);
     }
 
     public function attendenceAction()
     {
         $taskOject = DataObject\Myblock::getById(5);
         $task = $taskOject->getTask();
-        /*$salaryObject = DataObject\Consent::getById(9);
-        $salary = $salaryObject->getStore();*/
         return $this->render('home/attendence.html.twig',[
             'task'=>$task,
-
-            /*'salary'=> $salary,*/
         ]);
     }
 
@@ -61,9 +65,6 @@ class HomeController extends FrontendController
     {
         $employee = DataObject\Mybrick::getById(8);
         $employeeBrick = $employee->getTestbrick();
-/*        if ($employeeBrick === null) {
-            throw $this->createNotFoundException('Employee not found');
-        }*/
         return $this->render('home/Leave.html.twig',[
             'employeeBrick' => $employeeBrick,
         ]);
@@ -72,11 +73,13 @@ class HomeController extends FrontendController
     public function aboutAction()
     {
         $link = DataObject\Myblock::getById(5);
+        $frData = $link->getAbout('fr');
         $links = $link->getPimcore();
         $test = TestCollection::getById(7);
 
         return $this->render('home/About.html.twig',[
             'link'=>$links,
+            'frData'=>$frData,
             'test'=>$test,
         ]);
     }

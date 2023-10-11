@@ -4,7 +4,17 @@ pimcore:
             thumbnails:
                 definitions:
                     EMS:
-                        items: {  }
+                        items:
+                            -
+                                method: frame
+                                arguments:
+                                    width: 500
+                                    height: 250
+                                    forceResize: true
+                            -
+                                method: setBackgroundColor
+                                arguments:
+                                    color: '#ffff'
                         medias: {  }
                         name: EMS
                         description: ''
@@ -16,6 +26,6 @@ pimcore:
                         preserveMetaData: false
                         rasterizeSVG: false
                         downloadable: false
-                        modificationDate: 1695962770
+                        modificationDate: 1697009623
                         creationDate: 1695962722
                         preserveAnimation: false
