@@ -1,8 +1,39 @@
 imports:
     - { resource: 'local/' }
 
+pimcore_admin:
+    documents:
+        notes_events:
+            types:
+                - ""
+                - "document"
+                - "seo"
+                - "some other type"
+    assets:
+        notes_events:
+            types:
+                - ""
+                - "content"
+                - "licese renewal"
+                - "some other type"
+    objects:
+        notes_events:
+            types:
+                - ""
+                - "manual data change"
+                - "some other type"
 
 pimcore:
+    models:
+        class_overrides:
+            'Pimcore\Model\DataObject\TestClass': 'App\Model\DataObject\TestClass'
+
+#    documents:
+#        auto_save_interval: 60
+#    translations:
+#        admin_translation_mapping:
+#            'hr': 'en'
+#            'zh': 'zh_Hans'
 
 # IMPORTANT Notice!
 # Following there are only some examples listed, for a full list of possible options, please run the following command:
@@ -133,4 +164,3 @@ framework:
 #     return:
 #         name: ''
 #         email: ''
-

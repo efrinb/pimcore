@@ -6,9 +6,13 @@ pimcore:
         valid_languages:
             - en
             - fr
+            - hi
+            - ml
         fallback_languages:
             en: ''
             fr: ''
+            hi: ''
+            ml: ''
         default_language: en
         debug_admin_translations: false
     documents:
@@ -19,6 +23,8 @@ pimcore:
             default: ''
             localized:
                 en: ''
+                fr: ''
+                hi: ''
     objects:
         versions:
             days: null

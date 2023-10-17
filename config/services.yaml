@@ -30,6 +30,16 @@ parameters:
     #pimcore_executable_dot: /usr/bin/dot
 
 services:
+    App\Service\CustomService:
+        arguments:
+            $customLog: '@monolog.logger.custom_log'
+
+    app.admin_style_listener:
+        class: App\EventListener\AdminStyleListener
+        tags:
+            - { name: kernel.event_listener, event: pimcore.admin.resolve.elementAdminStyle, method: onResolveElementAdminStyle }
+
+
     # default configuration for services in *this* file
     _defaults:
         # automatically injects dependencies in your services

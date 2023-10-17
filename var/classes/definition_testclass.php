@@ -5,17 +5,20 @@
  * Variants: no
  *
  * Fields Summary:
- * - testContent [fieldcollections]
+ * - name [input]
+ * - image [image]
+ * - description [textarea]
+ * - collection [fieldcollections]
  */
 
 return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => '3',
-   'name' => 'TestCollection',
+   'id' => '6',
+   'name' => 'testclass',
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1696395060,
+   'modificationDate' => 1697523792,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -46,7 +49,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     array (
       0 => 
       \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Field Collection',
+         'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
          'title' => '',
@@ -59,9 +62,87 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'name',
+             'title' => 'Name',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'fieldtype' => '',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
+             'width' => '',
+             'defaultValueGenerator' => '',
+          )),
+          1 => 
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+             'name' => 'image',
+             'title' => 'Image',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'fieldtype' => '',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'uploadPath' => '',
+             'width' => '',
+             'height' => '',
+          )),
+          2 => 
+          \Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+             'name' => 'description',
+             'title' => 'Description',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'fieldtype' => '',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'maxLength' => NULL,
+             'showCharCount' => false,
+             'excludeFromSearchIndex' => false,
+             'height' => '',
+             'width' => '',
+          )),
+          3 => 
           \Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
-             'name' => 'testContent',
-             'title' => 'Test Content',
+             'name' => 'collection',
+             'title' => 'Collection',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,

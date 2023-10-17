@@ -5,15 +5,17 @@
         <div class="asset-thumbnail">
             {{ asset.getThumbnail('EMS').getHtml() | raw }}
             {{ asset.getMetadata('link') }}
-            {{ dump(vdoAsset) }}
-{#            {{ vdoAsset.getThumbnail('aboutVideo')}}
-            {{ vdoAsset.getMetadata('about') }}#}
-            {#{% if vdoAsset is defined and vdoAsset %}
-                {{ pimcore_video(vdoAsset) }}
-            {% else %}
-                <p>Video not found or could not be loaded.</p>
-            {% endif %}#}
+            {#{{ dump(vdoAsset) }}#}
+            {#{% set websiteName = pimcore_website_config().websiteSettings %}#}
         </div>
+        <h1> WebsiteSettings : {#{{ pimcore_website_config() }}#} {{ websiteSettings }}</h1>
+        <di>
+            <ul>
+                {% for language in bar %}
+                    <li>{{ language }}</li>
+                {% endfor %}
+            </ul>
+        </di>
         {% for i in pimcore_block('contentblock').iterator %}
             <h2>{{ pimcore_input('subline') }}</h2>
             {{ pimcore_wysiwyg('content') }}
