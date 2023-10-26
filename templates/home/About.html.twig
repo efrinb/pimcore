@@ -23,14 +23,14 @@
                 <li><a href="{{ link.direct }}">{{ link.text }}</a></li>
             </ul>
         </div>
-        <div class="custom-field">
+        {#<div class="custom-field">
             {% if test.testContent is not null  %}
                 {% for testItem in test.testContent.items %}
                     <p><b>Location :</b>{{ testItem.testSelect }}</p>
                     <p>{{ testItem.location }}</p>
                 {% endfor %}
             {% endif %}
-        </div>
+        </div>#}
         <h2>{{ pimcore_input('employeeImages') }}</h2>
         <section id="renderlet-gallery">
             {{

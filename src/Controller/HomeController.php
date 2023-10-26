@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Model\DataObject\TestClass;
+use ProductBundle\Model\DataObject\TestClass;
 use Exception;
 use Pimcore\Bundle\ApplicationLoggerBundle\ApplicationLogger;
 use Pimcore\Bundle\ApplicationLoggerBundle\FileObject;
@@ -41,24 +41,24 @@ class HomeController extends FrontendController
         $note->addData("myAsset", "asset", Model\Asset::getById(16));
         $note->save();
 
-        $user = User::create([
-            "parentId" => (0),
+        /*$user = User::create([
+            "parentId" => 0,
             "username" => "efrin",
             "password" => "efrin@123",
             "hasCredentials" => true,
             "active" => true
         ]);
         $object = new DataObject\Member();
-        $object->setUser($user->getId());
+        $object->setUser($user->getId());*/
 
 
-        if ($request->hasSession()) {
-            $session = $request->getSession();
+        /*if ($request->hasSession()) {
+            $session = $request->getSession();*/
 
             /** @var AttributeBag $bag */
-            $bag = $session->getBag('session_cart');
+            /*$bag = $session->getBag('session_cart');
             $bag->set('foo', 1);
-        }
+        }*/
 
         $tag = new \Pimcore\Model\Element\Tag();
         try {
@@ -146,12 +146,12 @@ class HomeController extends FrontendController
         $link = DataObject\Myblock::getById(5);
         $frData = $link->getAbout('fr');
         $links = $link->getPimcore();
-        $test = TestCollection::getById(7);
+        /*$test = TestCollection::getById(7);*/
 
         return $this->render('home/About.html.twig',[
             'link'=>$links,
             'frData'=>$frData,
-            'test'=>$test,
+            /*'test'=>$test,*/
         ]);
     }
 

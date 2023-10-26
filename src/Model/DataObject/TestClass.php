@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model\DataObject;
+namespace ProductBundle\Model\DataObject;
 class TestClass extends \Pimcore\Model\DataObject\Testclass
 {
     protected ?string $CustomAttribute;

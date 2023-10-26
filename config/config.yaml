@@ -22,11 +22,16 @@ pimcore_admin:
                 - ""
                 - "manual data change"
                 - "some other type"
-
 pimcore:
     models:
         class_overrides:
             'Pimcore\Model\DataObject\TestClass': 'App\Model\DataObject\TestClass'
+
+    bundles:
+        search_paths:
+            - src/EmployeeBundle
+            - src/CustomBundle
+            - bundles/ProductBundle
 
 #    documents:
 #        auto_save_interval: 60

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model\Employee;
+namespace ProductBundle\Model\Employee;
 
 interface EmployeeDataInterfafce
 {

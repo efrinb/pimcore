@@ -14,6 +14,7 @@
   "require": {
     "doctrine/doctrine-migrations-bundle": "^3.0",
     "pimcore/admin-ui-classic-bundle": "^1.0",
+    "pimcore/bundle-generator": "^2.0",
     "pimcore/pimcore": "^11.0.4",
     "symfony/dotenv": "^6.2",
     "symfony/runtime": "^6.2"
@@ -28,7 +29,10 @@
   "autoload": {
     "psr-4": {
       "App\\": "src/",
-      "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+      "Pimcore\\Model\\DataObject\\": "var/classes/DataObject",
+      "EmployeeBundle\\": "src/EmployeeBundle/src",
+      "CustomBundle\\": "src/CustomBundle/src",
+      "ProductBundle\\": "bundles/ProductBundle/src"
     }
   },
   "autoload-dev": {

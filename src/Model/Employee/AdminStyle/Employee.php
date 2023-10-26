@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model\Employee\AdminStyle;
+namespace ProductBundle\Model\Employee\AdminStyle;
 
 use Pimcore\Model\DataObject;
 use Pimcore\Model\Element\AdminStyle;

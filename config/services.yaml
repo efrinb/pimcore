@@ -39,6 +39,17 @@ services:
         tags:
             - { name: kernel.event_listener, event: pimcore.admin.resolve.elementAdminStyle, method: onResolveElementAdminStyle }
 
+    App\EventListener\TestListener:
+        tags:
+            - { name: kernel.event_listener, event: pimcore.asset.preUpdate, method: onPreUpdate }
+            - { name: kernel.event_listener, event: pimcore.document.preUpdate, method: onPreUpdate }
+            - { name: kernel.event_listener, event: pimcore.dataobject.preUpdate, method: onPreUpdate }
+            - { name: kernel.event_listener, event: pimcore.asset.preAdd, method: onPreAdd }
+            - { name: kernel.event_listener, event: pimcore.document.preAdd, method: onPreAdd }
+            - { name: kernel.event_listener, event: pimcore.dataobject.preAdd, method: onPreAdd }
+            - { name: kernel.event_listener, event: pimcore.asset.preDelete, method: onPreDelete }
+            - { name: kernel.event_listener, event: pimcore.document.preDelete, method: onPreDelete }
+            - { name: kernel.event_listener, event: pimcore.dataobject.preDelete, method: onPreDelete }
 
     # default configuration for services in *this* file
     _defaults:

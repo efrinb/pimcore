@@ -2,7 +2,7 @@
 
 namespace App\EventListener;
 
-use App\Model\Employee\AdminStyle\Employee;
+use ProductBundle\Model\Employee\AdminStyle\Employee;
 use Pimcore\Model\DataObject\Myblock;
 
 
