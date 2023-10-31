@@ -32,7 +32,8 @@
       "Pimcore\\Model\\DataObject\\": "var/classes/DataObject",
       "EmployeeBundle\\": "src/EmployeeBundle/src",
       "CustomBundle\\": "src/CustomBundle/src",
-      "ProductBundle\\": "bundles/ProductBundle/src"
+      "ProductBundle\\": "bundles/ProductBundle/src",
+      "LogBundle\\": "bundles/LogBundle/src"
     }
   },
   "autoload-dev": {

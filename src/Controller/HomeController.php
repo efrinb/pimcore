@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use ProductBundle\Model\DataObject\TestClass;
+use App\Model\DataObject\TestClass;
 use Exception;
 use Pimcore\Bundle\ApplicationLoggerBundle\ApplicationLogger;
 use Pimcore\Bundle\ApplicationLoggerBundle\FileObject;

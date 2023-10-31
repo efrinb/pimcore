@@ -13,5 +13,6 @@ return [
     Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle::class => ['all' => true],
     EmployeeBundle\EmployeeBundle::class => ['all' => true],
     CustomBundle\CustomBundle::class => ['all' => true],
-    ProductBundle\ProductBundle::class => ['all' => true]
+    ProductBundle\ProductBundle::class => ['all' => true],
+    LogBundle\LogBundle::class => ['all' => true],
 ];

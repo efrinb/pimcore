@@ -1,8 +1,20 @@
 monolog:
     handlers:
+        adminLog_activity:
+            type: stream
+            level: info
+            path: '%kernel.logs_dir%/bundles/AdminLogBundle/logs/admin_activity_log.log'
+            channels: [admin_statistics]
+
+#        adminLog_handler:
+#            type: stream
+#            level: info
+#            path: '%kernel.logs_dir%/admin_activity_log.log'
+#            channels: [admin_statistics]
+
         custom_handler:
             type: stream
             path: '%kernel.logs_dir%/custom.log'
             level: debug
-            channels: ['custom_log']
-    channels: ['custom_log']
+            channels: [custom_log]
+    channels: [custom_log, admin_statistics]

@@ -14,6 +14,6 @@ class CustomService
 
     public function customLogger(): void
     {
-        $this->customLog->debug('Test Message');
+        $this->customLog->info('Test Message');
     }
 }

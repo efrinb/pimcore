@@ -33,7 +33,6 @@ class ProductController extends AbstractController
         $vote->setScore(3);
         $vote->setUsername('efrin!'.mt_rand(1, 999));
         $vote->save();
-        /*return new JsonResponse(['message' => 'Score Saved Successfully!'], 200);*/
         return $this->render("@ProductBundle/vote/votes.html.twig",[
             'vote' => $vote
         ]);
@@ -47,7 +46,6 @@ class ProductController extends AbstractController
         $list = new Listing();
         $list->setCondition("score > ?", array(1));
         $votesList = $list->load();
-        /*return new JsonResponse(['message' => 'Listing..']);*/
         return $this->render('@ProductBundle/vote/listing.html.twig', [
             'voteList' => $votesList
         ]);
