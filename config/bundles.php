@@ -15,4 +15,5 @@ return [
     CustomBundle\CustomBundle::class => ['all' => true],
     ProductBundle\ProductBundle::class => ['all' => true],
     LogBundle\LogBundle::class => ['all' => true],
+    AdminConfBundle\AdminConfBundle::class => ['all' => true],
 ];

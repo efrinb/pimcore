@@ -4,13 +4,21 @@ namespace LogBundle\Controller;
 
 use LogBundle\Model\Activity\LogListing;
 use Pimcore\Controller\FrontendController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+//use Pimcore\Security\User\TokenStorageUserResolver;
 
 class DefaultController extends FrontendController
 {
+
+//    protected TokenStorageUserResolver $userResolver;
+//    public function __construct(TokenStorageUserResolver $userResolver)
+//    {
+//        $this->userResolver = $userResolver;
+//    }
+
     /**
      * @Route("/log")
      */
@@ -46,4 +54,30 @@ class DefaultController extends FrontendController
             'data' => $pagedData,
         ]);
     }
+
+//    /**
+//     * @Route("/logdata")
+//    */
+//    public function logAction(Request $request, LoggerInterface $logger): Response
+//    {
+//        $logEntry = new Activity();
+//        $timestamp = new \DateTime();
+//        $time = $timestamp->format('Y-m-d H:i:s');
+//        $user = $this->userResolver->getUser();
+//        $logEntry->setTimestamp($time);
+//        $logEntry->setAction($request->attributes->get('_controller'));
+//        $logEntry->setUserId($user ? $user->getId() : -1);
+//
+//        $logEntry->save();
+//
+//        if ($logEntry->getId()){
+//            $logger->info('Log entry saved with ID:'.$logEntry->getId());
+//        }
+//        else{
+//            $logger->error('Failed to save');
+//        }
+//
+//        var_dump($logEntry);
+//        return  new Response('Hello world from log');
+//    }
 }

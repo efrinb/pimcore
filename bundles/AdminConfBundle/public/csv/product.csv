@@ -1,0 +1,2 @@
+key,product_name,product_details,product_usage,product_price,product_mfd,colors,brands,sku,product_image,category,country,test_image,manytomany_object_relation,productBrick
+productData,T-Shirt,Puma Fitness T-Shirt,Fitness T-shirt for workout,200,2023-11-16,Black,"Puma,Adidas,Nike",0001,/Products/cotton-fitness-t-shirt-black.jpg,/Product/Products,IN,/Products/cotton-fitness-t-shirt-black.jpg,/Venom,brickValue

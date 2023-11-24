@@ -31,14 +31,14 @@ pimcore.plugin.LogBundle = Class.create({
             var store = Ext.create('Ext.data.Store', {
                 fields: ['id', 'userid', 'action', 'timestamp'],
                 autoLoad: true,
-                pageSize: 50, // Number of records to display per page (adjust as needed)
+                pageSize: 50,
                 proxy: {
                     type: 'ajax',
-                    url: '/listinglog', // Update the URL to match your route
+                    url: '/listinglog',
                     reader: {
                         type: 'json',
-                        rootProperty: 'data', // The property containing the data in the JSON response
-                        totalProperty: 'total', // The property containing the total count in the JSON response
+                        rootProperty: 'data',
+                        totalProperty: 'total',
                     }
                 }
             });
@@ -77,7 +77,7 @@ pimcore.plugin.LogBundle = Class.create({
                     }
                 ]
             });
-
+            tabPanel.setIcon('/bundles/pimcoreadmin/img/flat-white-icons/text.svg');
             mainPanel.add(tabPanel);
         }
         mainPanel.setActiveTab(existingTab || tabPanel);

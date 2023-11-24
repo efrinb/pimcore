@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin Config</title>
+</head>
+{% block content %}
+    <h1>Admin Configuration Data</h1>
+    <ul>
+        <li><strong>Employee Name:</strong> {{ configData.emp_name }}</li>
+        <li><strong>Position:</strong> {{ configData.emp_position|join(', ') }}</li>
+        <li><strong>Description:</strong> {{ configData.emp_details }}</li>
+    </ul>
+{% endblock %}
+</html>
+
+

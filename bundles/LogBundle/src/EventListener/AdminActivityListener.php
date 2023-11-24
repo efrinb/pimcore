@@ -49,7 +49,8 @@ class AdminActivityListener implements EventSubscriberInterface
         $time = $timestamp->format('Y-m-d H:i:s');
         $logEntry->setTimestamp($time);
         $logEntry->setAction($request->attributes->get('_controller'));
-        $logEntry->setUserId($user ? $user->getId(): 'NA');
+        /*$logEntry->setUserId($user ? $user->getId(): 'NA');*/
+        $logEntry->setUserId($user ? $user->getId() : -1);
         $logEntry->save();
     }
 

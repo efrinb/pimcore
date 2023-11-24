@@ -3,3 +3,4 @@ twig:
     paths:
         '%kernel.project_dir%/bundles/ProductBundle/templates': ProductBundle
         '%kernel.project_dir%/bundles/LogBundle/templates': LogBundle
+        '%kernel.project_dir%/bundles/AdminConfBundle/templates': AdminConfBundle

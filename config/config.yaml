@@ -33,6 +33,10 @@ pimcore:
             - src/CustomBundle
             - bundles/ProductBundle
             - bundles/LogBundle
+            - bundles/AdminConfBundle
+
+
+
 
 #    documents:
 #        auto_save_interval: 60

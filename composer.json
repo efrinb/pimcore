@@ -33,7 +33,8 @@
       "EmployeeBundle\\": "src/EmployeeBundle/src",
       "CustomBundle\\": "src/CustomBundle/src",
       "ProductBundle\\": "bundles/ProductBundle/src",
-      "LogBundle\\": "bundles/LogBundle/src"
+      "LogBundle\\": "bundles/LogBundle/src",
+      "AdminConfBundle\\": "bundles/AdminConfBundle/src"
     }
   },
   "autoload-dev": {
