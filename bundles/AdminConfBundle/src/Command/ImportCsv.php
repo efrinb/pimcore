@@ -67,66 +67,6 @@ class ImportCsv extends Command
         return Command::SUCCESS;
     }
 
-/*    private function handleField(string $fieldType, $fieldValue, Csvclass $productObject, OutputInterface $output): array
-    {
-        $data = [];
-        try {
-            $fieldDefinition = $productObject->getClass()->getFieldDefinition($fieldType);
-
-            if ($fieldDefinition instanceof Input) {
-
-                $data[$fieldType] = $this->handleInputField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\Textarea) {
-
-                $data[$fieldType] = $this->handleTextareaField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\Wysiwyg) {
-
-                $data[$fieldType] = $this->handleWysiwygField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\Numeric) {
-
-                $data[$fieldType] = $this->handleNumericField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\manyToOneRelation) {
-
-                $data[$fieldType] = $this->handleManyToOneRelation($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\country) {
-
-                $data[$fieldType] = $this->handleCountryField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\date) {
-
-                $data[$fieldType] = $this->handleDateField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\Select) {
-
-                $data[$fieldType] = $this->handleSelectField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\MultiSelect) {
-
-                $data[$fieldType] = $this->handleMultiSelectField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\BooleanSelect) {
-                $data[$fieldType] = $this->handleBooleanSelectField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\Image) {
-
-                $data[$fieldType] = $this->handleImageField($fieldValue);
-
-            } elseif ($fieldDefinition instanceof DataObject\ClassDefinition\Data\ImageGallery) {
-
-                $data[$fieldType] = $this->handleImageGalleryField($fieldValue);
-            }
-
-        }catch (\Exception $e){
-            $output->writeln("Error handling field '{$fieldType}': " . $e->getMessage());
-        }
-        return $data;
-    }*/
-
 
     private function handleField(string $fieldType, $fieldValue, Csvclass $productObject, OutputInterface $output): array
     {

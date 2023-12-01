@@ -34,7 +34,7 @@ pimcore:
             - bundles/ProductBundle
             - bundles/LogBundle
             - bundles/AdminConfBundle
-
+            - bundles/MagentoIntegrationBundle
 
 
 
