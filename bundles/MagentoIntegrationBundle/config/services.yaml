@@ -23,7 +23,6 @@ services:
 #            - "plain_value"
 #            - "%parameter%"
 
-
     #Dependency Injection for file locator
     MagentoIntegrationBundle\Tool\Installer:
         public: true
@@ -42,3 +41,5 @@ services:
         tags:
             - { name: kernel.event_listener, event: pimcore.dataobject.postAdd, method: onPostAdd }
 
+    MagentoIntegrationBundle\Command\UpdateProductImageName:
+        tags: ['console.command']
