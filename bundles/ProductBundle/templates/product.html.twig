@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Products</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/product/css/product.css') }}">
+    {% endblock %}
+</head>
+{% block content %}
+    <h1>Product Preview</h1>
+    <div class="product-gallery">
+        <img src="{{ product.images }}">
+    </div>
+    <div class="product-details">
+        <div class="product-info">
+            <span>SKU:</span>
+            <div class="prdct-sku">{{ product.sku }}</div>
+        </div>
+        <div class="product-info">
+            <label>Product Name:</label>
+            <div class="prdct-name">{{ product.productName }}</div>
+        </div>
+        <div class="product-info">
+            <label>Size:</label>
+            <div class="prdct-size">{{ product.size }}</div>
+        </div>
+        <div class="product-info">
+            <label>Color:</label>
+            <div class="prdct-clr">{{ product.color }}</div>
+        </div>
+    </div>
+{% endblock %}
+</html>
+

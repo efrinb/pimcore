@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                3540bdbf-efde-46e8-b5bf-fd8620a576ba:
+                    name: Footer
+                    description: 'footer content'
+                    key: footer
+                    type: document
+                    data: footer
+                    config: ''
+                    ctype: document
+                    inheritable: false
+                    creationDate: 1697188624
+                    modificationDate: 1697188655

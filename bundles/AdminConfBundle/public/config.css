@@ -1,0 +1,37 @@
+.pimcore_icon_save {
+    background-image: url('/bundles/AdminConfBundle/public/img/flat-color-icons/ok.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px; /* Set the size according to your image */
+    padding-left: 24px; /* Adjust padding to make space for the icon */
+}
+
+/*Popup style*/
+
+/*.save-success-popup {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 9999;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.popup-header {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.popup-message {
+    padding: 10px;
+}
+
+.popup-slide-up {
+    opacity: 1;
+    bottom: 60px;
+    transition: all 0.5s ease-in-out;
+}*/

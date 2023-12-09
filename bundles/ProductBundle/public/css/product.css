@@ -1,0 +1,49 @@
+/* Center the content vertically and horizontally */
+.product-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust the height based on your layout */
+}
+
+/* Style the product details */
+.product-details {
+    text-align: left; /* Align content to the left within the product details container */
+    font-family: Arial, sans-serif; /* Use a font of your choice */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the product info blocks */
+.product-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add some spacing between product info blocks */
+}
+
+.product-info span,
+.product-info label {
+    font-weight: bold;
+    width: 100px; /* Adjust the width of the labels and spans as needed */
+    display: inline-block;
+    text-align: right; /* Align labels to the right */
+}
+
+.product-info div {
+    font-weight: normal; /* Reset font weight for div content */
+    margin-left: 10px; /* Add some spacing between labels/spans and divs */
+}
+
+/* Style the product image */
+.product-gallery img {
+    max-width: 100%; /* Make the image responsive within its container */
+    height: auto;
+    display: block;
+    border: 1px solid #ccc; /* Add a border around the image */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Customize the product details and gallery */
+.product-details, .product-gallery {
+    margin: 20px;
+}

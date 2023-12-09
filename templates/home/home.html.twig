@@ -1,0 +1,43 @@
+{% extends 'layouts/homelayout.html.twig' %}
+
+{% block content %}
+    <div class="content">
+        <div class="my-breadcrumbs">
+            <a href="/EMS/Home">{{ 'Home'|trans }}</a> >
+        </div>
+        {% for i in pimcore_block('contentblock').iterator %}
+            <h2>{{ pimcore_input('subline') }}</h2>
+            {{ pimcore_wysiwyg('content') }}
+        {% endfor %}
+        <div class="ems-about">
+            {{ pimcore_video('myVideo', {
+                attributes: {
+                    class: 'video-js vjs-default-skin vjs-big-play-centered',
+                    'data-setup': '{}'
+                },
+                thumbnail: 'content',
+                height: 380,
+                width: 400,
+
+            }) }}
+        </div>
+        {% set headerColor = document.getProperty('header_color') %}
+        {% set footer = document.getProperty('footer') %}
+        {{ footer }}<br>
+        {{ headerColor }}
+        {% set options = [
+            ["option1", "Option One"|trans({}, 'admin', pimcore_editmode_admin_language())],
+            ["option2", "Option Two"|trans({}, 'admin', pimcore_editmode_admin_language())],
+            ["option3", "Option Three"|trans({}, 'admin', pimcore_editmode_admin_language())]
+        ] %}
+
+        <ul>
+            {% for key, value in pimcore_website_config() %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+
+        {{ pimcore_select("select", { "store": options }) }}
+    </div>
+    {{ pimcore_snippet('footerSnippet') }}
+{% endblock %}

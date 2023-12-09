@@ -1,0 +1,46 @@
+{% extends 'layouts/homelayout.html.twig' %}
+
+
+{% block content %}
+    <div class="content">
+        <div class="my-breadcrumbs">
+            <a href="/EMS/Home">{{ 'Home'|trans }}</a> >
+        </div>
+{#        {% for i in pimcore_block('contentblock').iterator %}
+            <h2>{{ pimcore_input('subline') }}</h2>
+            {{ pimcore_wysiwyg('content') }}
+        {% endfor %}#}
+        <div class="custom-block">
+
+            <h2>{{ pimcore_input('AboutUs') }}</h2>
+            {% if editmode %}
+                {{ pimcore_relation('myblock') }}
+            {% else %}
+                {% set myblock = pimcore_relation('myblock').element %}
+                    <p>{{ myblock.about }}</p>
+            {% endif %}
+            <ul class="foo">
+                <li><a href="{{ link.direct }}">{{ link.text }}</a></li>
+            </ul>
+        </div>
+        {#<div class="custom-field">
+            {% if test.testContent is not null  %}
+                {% for testItem in test.testContent.items %}
+                    <p><b>Location :</b>{{ testItem.testSelect }}</p>
+                    <p>{{ testItem.location }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>#}
+        <h2>{{ pimcore_input('employeeImages') }}</h2>
+        <section id="renderlet-gallery">
+            {{
+            pimcore_renderlet('myGallery', {
+                "controller" : "App\\Controller\\HomeController::myGalleryAction",
+                "title" : "Drag an asset folder here to get a gallery",
+                "height" : 400
+            })
+            }}
+        </section>
+    </div>
+    {{ pimcore_snippet('footerSnippet') }}
+{% endblock %}

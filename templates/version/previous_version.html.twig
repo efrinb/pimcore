@@ -1,0 +1,25 @@
+{% extends 'layouts/homelayout.html.twig' %}
+
+
+{% block content %}
+    <div class="content">
+        <h1>Previous Version Data</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            {#{{ dump(previousObject) }}#}
+            {% for key, value in previousObject %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

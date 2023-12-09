@@ -1,0 +1,5 @@
+log:
+    resource: "@LogBundle/src/Controller/"
+    type:     annotation
+    prefix:   /
+

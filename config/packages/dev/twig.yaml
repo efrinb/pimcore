@@ -1,0 +1,6 @@
+twig:
+    default_path: "%kernel.project_dir%/templates"
+    paths:
+        '%kernel.project_dir%/bundles/ProductBundle/templates': ProductBundle
+        '%kernel.project_dir%/bundles/LogBundle/templates': LogBundle
+        '%kernel.project_dir%/bundles/AdminConfBundle/templates': AdminConfBundle

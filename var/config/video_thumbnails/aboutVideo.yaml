@@ -1,0 +1,15 @@
+pimcore:
+    assets:
+        video:
+            thumbnails:
+                definitions:
+                    aboutVideo:
+                        items: {  }
+                        medias: {  }
+                        name: aboutVideo
+                        description: ''
+                        group: ''
+                        videoBitrate: 10
+                        audioBitrate: 10
+                        modificationDate: 1697014021
+                        creationDate: 1697012344

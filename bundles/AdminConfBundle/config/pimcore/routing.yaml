@@ -1,0 +1,5 @@
+admin_conf:
+    resource: "@AdminConfBundle/src/Controller/"
+    type:     annotation
+    prefix:   /
+

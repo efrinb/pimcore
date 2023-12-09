@@ -11,7 +11,7 @@ cd ./my-project
 ```
 
 - Point your virtual host to `my-project/public` 
-- Open https://your-host/admin in your browser
+- Open (http://localhost/admin/) in your browser
 - Done! 😎
 
 ## Docker

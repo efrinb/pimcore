@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                3b30e7c8-826b-4242-ac79-0ea1b94700c8:
+                    name: 'Object Property'
+                    description: 'Custom Object property'
+                    key: object_property
+                    type: object
+                    data: 'Custom Object Property'
+                    config: ''
+                    ctype: object
+                    inheritable: false
+                    creationDate: 1697174328
+                    modificationDate: 1697174407

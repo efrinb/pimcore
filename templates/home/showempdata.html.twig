@@ -1,0 +1,9 @@
+{% extends 'layouts/homelayout.html.twig' %}
+
+{% block content %}
+    <div class="content">
+        <label>Name :</label>{{ empData.firstname }}
+        {{ empData.lastname }}<br>
+        <label>Email :</label>{{ empData.email }}
+    </div>
+{% endblock %}
