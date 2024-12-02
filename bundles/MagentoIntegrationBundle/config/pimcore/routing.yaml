@@ -1,0 +1,5 @@
+magento_integration:
+    resource: "@MagentoIntegrationBundle/src/Controller/"
+    type:     annotation
+    prefix:   /
+

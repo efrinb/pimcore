@@ -1,0 +1,125 @@
+pimcore_custom_reports:
+    definitions:
+        ProductReport:
+            name: ProductReport
+            sql: ''
+            dataSourceConfig:
+                -
+                    sql: 'Select *'
+                    from: documents
+                    where: ''
+                    groupby: ''
+                    type: sql
+            columnConfiguration:
+                -
+                    name: id
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-6
+                -
+                    name: parentId
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-7
+                -
+                    name: type
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-8
+                -
+                    name: key
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-9
+                -
+                    name: path
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-10
+                -
+                    name: index
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-11
+                -
+                    name: published
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-12
+                -
+                    name: creationDate
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-13
+                -
+                    name: modificationDate
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-14
+                -
+                    name: userOwner
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-15
+                -
+                    name: userModification
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-16
+                -
+                    name: versionCount
+                    display: true
+                    export: true
+                    order: true
+                    width: ''
+                    label: ''
+                    id: extModel2047-17
+            niceName: MaintainanceProduct
+            group: Maintainance
+            groupIconClass: ''
+            iconClass: ''
+            menuShortcut: true
+            reportClass: ''
+            chartType: pie
+            pieColumn: published
+            pieLabelColumn: published
+            xAxis: null
+            yAxis: {  }
+            modificationDate: 1697196340
+            creationDate: 1697195955
+            shareGlobally: true
+            sharedUserNames: {  }
+            sharedRoleNames: {  }

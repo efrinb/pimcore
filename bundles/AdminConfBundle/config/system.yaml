@@ -1,0 +1,5 @@
+emp_name: 'Efrin Babu'
+emp_position:
+    - DevOps
+emp_details: 'Employee at Codilar Technologies Calicut Cyberpark'
+config_checked: true

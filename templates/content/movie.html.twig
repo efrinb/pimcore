@@ -1,4 +1,4 @@
-{% extends 'layout.html.twig' %}
+{% extends 'layouts/layout.html.twig' %}
 {% block content %}
     <h1>{{ pimcore_input("headline", {"width": 540}) }}</h1>
 
@@ -9,6 +9,7 @@
             {% set movie = pimcore_relation("movies").element %}
             {% if movie %}
                 <h2>{{ movie.name }}</h2>
+                <h2>{{ movie.sku }}</h2>
                 <div class="content">
                     {% if movie.picture %}
                         {{ movie.picture.thumbnail("content").html|raw }}

@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                61c42cf2-a4c1-407f-9cd5-65b585b10e44:
+                    name: 'Testing Property'
+                    description: Testing
+                    key: new_key
+                    type: select
+                    data: ''
+                    config: 'Value1,Value2,Value3'
+                    ctype: object
+                    inheritable: false
+                    creationDate: 1697193527
+                    modificationDate: 1697193957

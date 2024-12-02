@@ -1,0 +1,15 @@
+pimcore:
+    properties:
+        predefined:
+            definitions:
+                1239a6d8-1600-4e50-8b23-395334003185:
+                    name: 'Header Color'
+                    description: 'Specify Header '
+                    key: header_color
+                    type: select
+                    data: ''
+                    config: 'black,red,purple,blue'
+                    ctype: document
+                    inheritable: false
+                    creationDate: 1697179229
+                    modificationDate: 1697179320

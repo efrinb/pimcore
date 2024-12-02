@@ -1,0 +1,45 @@
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        # automatically injects dependencies in your services
+        autowire: true
+        # automatically registers your services as commands, event subscribers, etc.
+        autoconfigure: true
+        # this means you cannot fetch services directly from the container via $container->get()
+        # if you need to do this, you can override this setting on individual services
+        public: false
+
+    # controllers are imported separately to make sure they're public
+    # and have a tag that allows actions to type-hint services
+    MagentoIntegrationBundle\Controller\:
+        resource: '../src/Controller'
+        public: true
+        tags: ['controller.service_arguments']
+
+# add more services, or override services that need manual wiring
+#    MagentoIntegrationBundle\ExampleClass:
+#        arguments:
+#            - "@service_id"
+#            - "plain_value"
+#            - "%parameter%"
+
+    #Dependency Injection for file locator
+    MagentoIntegrationBundle\Tool\Installer:
+        public: true
+        arguments:
+            $fileLocator: '@file_locator'
+
+    #Api Key Created
+    MagentoIntegrationBundle\Service\ApiAuthentication:
+        arguments:
+            $apiKey: '%env(API_KEY)%'
+
+    #Event Listener for save and publish object
+    MagentoIntegrationBundle\EventListener\ApiEventLister:
+        arguments:
+            $applicationLogger: '@pimcore.app_logger'
+        tags:
+            - { name: kernel.event_listener, event: pimcore.dataobject.postAdd, method: onPostAdd }
+
+    MagentoIntegrationBundle\Command\UpdateProductImageName:
+        tags: ['console.command']

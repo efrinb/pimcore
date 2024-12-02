@@ -1,0 +1,34 @@
+{% extends 'layouts/homelayout.html.twig' %}
+
+{% block content %}
+    <div class="content">
+        <div class="asset-thumbnail">
+            {{ asset.getThumbnail('EMS').getHtml() | raw }}
+            {{ asset.getMetadata('link') }}
+            {#{{ dump(vdoAsset) }}#}
+            {#{% set websiteName = pimcore_website_config().websiteSettings %}#}
+        </div>
+        <h1> WebsiteSettings : {#{{ pimcore_website_config() }}#} {{ websiteSettings }}</h1>
+        <di>
+            <ul>
+                {% for language in bar %}
+                    <li>{{ language }}</li>
+                {% endfor %}
+            </ul>
+        </di>
+        {% for i in pimcore_block('contentblock').iterator %}
+            <h2>{{ pimcore_input('subline') }}</h2>
+            {{ pimcore_wysiwyg('content') }}
+        {% endfor %}
+        <div class="e-date">
+            {{ pimcore_date('myDate', {
+                'format': 'd.m.Y',
+                'outputFormat': '%d.%m.%Y'
+            })
+            }}
+        </div>
+        {{ pimcore_areablock("customAreablock") }}
+        {{ pimcore_numeric('myNumber') }}
+    </div>
+    {{ pimcore_snippet('footerSnippet') }}
+{% endblock %}

@@ -1,0 +1,31 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    EMS:
+                        items:
+                            -
+                                method: frame
+                                arguments:
+                                    width: 500
+                                    height: 250
+                                    forceResize: true
+                            -
+                                method: setBackgroundColor
+                                arguments:
+                                    color: '#ffff'
+                        medias: {  }
+                        name: EMS
+                        description: ''
+                        group: ''
+                        format: SOURCE
+                        quality: 85
+                        highResolution: null
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1697009623
+                        creationDate: 1695962722
+                        preserveAnimation: false

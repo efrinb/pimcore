@@ -1,0 +1,23 @@
+{% block content %}
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Score</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for log in logList %}
+                <tr>
+                    <td>{{ log.id }}</td>
+                    <td>{{ log.action }}</td>
+                    <td>{{ log.userid }}</td>
+                    <td>{{ log.timestamp }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

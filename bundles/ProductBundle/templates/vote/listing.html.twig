@@ -1,0 +1,22 @@
+{% block content %}
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Score</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for vote in voteList %}
+                <tr>
+                    <td>{{ vote.id }}</td>
+                    <td>{{ vote.username }}</td>
+                    <td>{{ vote.score }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

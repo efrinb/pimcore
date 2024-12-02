@@ -1,0 +1,283 @@
+pimcore:
+    objects:
+        custom_layouts:
+            definitions:
+                a0f3079a-ca1c-4eab-96f6-e6c683605559:
+                    id: a0f3079a-ca1c-4eab-96f6-e6c683605559
+                    name: customLayout
+                    description: ''
+                    creationDate: 1696830665
+                    modificationDate: 1696830675
+                    userOwner: 2
+                    classId: '2'
+                    layoutDefinitions:
+                        name: pimcore_root
+                        type: null
+                        region: null
+                        title: null
+                        width: 0
+                        height: 0
+                        collapsible: false
+                        collapsed: false
+                        bodyStyle: null
+                        datatype: layout
+                        children:
+                            -
+                                name: Layout
+                                type: null
+                                region: null
+                                title: ''
+                                width: ''
+                                height: ''
+                                collapsible: false
+                                collapsed: false
+                                bodyStyle: ''
+                                datatype: layout
+                                children:
+                                    -
+                                        name: block
+                                        title: Block
+                                        tooltip: ''
+                                        mandatory: false
+                                        noteditable: false
+                                        index: false
+                                        locked: false
+                                        style: ''
+                                        permissions: null
+                                        fieldtype: block
+                                        relationType: false
+                                        invisible: false
+                                        visibleGridView: false
+                                        visibleSearch: false
+                                        lazyLoading: false
+                                        disallowAddRemove: false
+                                        disallowReorder: false
+                                        collapsible: false
+                                        collapsed: false
+                                        maxItems: null
+                                        styleElement: ''
+                                        children:
+                                            -
+                                                name: name
+                                                title: Name
+                                                tooltip: ''
+                                                mandatory: false
+                                                noteditable: false
+                                                index: false
+                                                locked: false
+                                                style: ''
+                                                permissions: null
+                                                fieldtype: input
+                                                relationType: false
+                                                invisible: false
+                                                visibleGridView: false
+                                                visibleSearch: false
+                                                defaultValue: null
+                                                columnLength: 190
+                                                regex: ''
+                                                regexFlags: {  }
+                                                unique: false
+                                                showCharCount: false
+                                                width: ''
+                                                defaultValueGenerator: ''
+                                                datatype: data
+                                            -
+                                                name: number
+                                                title: Number
+                                                tooltip: ''
+                                                mandatory: false
+                                                noteditable: false
+                                                index: false
+                                                locked: false
+                                                style: ''
+                                                permissions: null
+                                                fieldtype: numeric
+                                                relationType: false
+                                                invisible: false
+                                                visibleGridView: false
+                                                visibleSearch: false
+                                                defaultValue: null
+                                                integer: false
+                                                unsigned: false
+                                                minValue: null
+                                                maxValue: null
+                                                unique: false
+                                                decimalSize: null
+                                                decimalPrecision: null
+                                                width: ''
+                                                defaultValueGenerator: ''
+                                                datatype: data
+                                            -
+                                                name: position
+                                                title: Position
+                                                tooltip: ''
+                                                mandatory: false
+                                                noteditable: false
+                                                index: false
+                                                locked: false
+                                                style: ''
+                                                permissions: null
+                                                fieldtype: input
+                                                relationType: false
+                                                invisible: false
+                                                visibleGridView: false
+                                                visibleSearch: false
+                                                defaultValue: null
+                                                columnLength: 190
+                                                regex: ''
+                                                regexFlags: {  }
+                                                unique: false
+                                                showCharCount: false
+                                                width: ''
+                                                defaultValueGenerator: ''
+                                                datatype: data
+                                        layout: null
+                                        datatype: data
+                                    -
+                                        name: localizedfields
+                                        title: ''
+                                        tooltip: null
+                                        mandatory: false
+                                        noteditable: false
+                                        index: false
+                                        locked: false
+                                        style: null
+                                        permissions: null
+                                        fieldtype: localizedfields
+                                        relationType: false
+                                        invisible: false
+                                        visibleGridView: true
+                                        visibleSearch: true
+                                        children:
+                                            -
+                                                name: about
+                                                title: About
+                                                tooltip: ''
+                                                mandatory: false
+                                                noteditable: false
+                                                index: false
+                                                locked: false
+                                                style: ''
+                                                permissions: null
+                                                fieldtype: wysiwyg
+                                                relationType: false
+                                                invisible: false
+                                                visibleGridView: false
+                                                visibleSearch: false
+                                                toolbarConfig: ''
+                                                excludeFromSearchIndex: false
+                                                maxCharacters: ''
+                                                height: ''
+                                                width: ''
+                                                datatype: data
+                                        region: null
+                                        layout: null
+                                        maxTabs: 3
+                                        border: false
+                                        provideSplitView: false
+                                        tabPosition: top
+                                        hideLabelsWhenTabsReached: null
+                                        permissionView: null
+                                        permissionEdit: null
+                                        labelWidth: 100
+                                        labelAlign: left
+                                        datatype: data
+                                    -
+                                        name: pimcore
+                                        title: Pimcore
+                                        tooltip: ''
+                                        mandatory: false
+                                        noteditable: false
+                                        index: false
+                                        locked: false
+                                        style: ''
+                                        permissions: null
+                                        fieldtype: link
+                                        relationType: false
+                                        invisible: false
+                                        visibleGridView: false
+                                        visibleSearch: false
+                                        allowedTypes: {  }
+                                        allowedTargets: {  }
+                                        disabledFields: {  }
+                                        datatype: data
+                                    -
+                                        name: Task
+                                        title: Task
+                                        tooltip: ''
+                                        mandatory: false
+                                        noteditable: false
+                                        index: false
+                                        locked: false
+                                        style: ''
+                                        permissions: null
+                                        fieldtype: table
+                                        relationType: false
+                                        invisible: false
+                                        visibleGridView: false
+                                        visibleSearch: false
+                                        cols: null
+                                        colsFixed: false
+                                        rows: null
+                                        rowsFixed: false
+                                        data: "Task1|Task2|Task3\nTask4|Task5|Task6"
+                                        columnConfigActivated: false
+                                        columnConfig: {  }
+                                        height: ''
+                                        width: ''
+                                        datatype: data
+                                    -
+                                        name: employee
+                                        title: Employee
+                                        tooltip: ''
+                                        mandatory: false
+                                        noteditable: false
+                                        index: false
+                                        locked: false
+                                        style: ''
+                                        permissions: null
+                                        fieldtype: structuredTable
+                                        relationType: false
+                                        invisible: false
+                                        visibleGridView: false
+                                        visibleSearch: false
+                                        labelWidth: 0
+                                        labelFirstCell: ''
+                                        cols:
+                                            -
+                                                type: text
+                                                position: 1
+                                                key: pimcore
+                                                label: Pimcore
+                                            -
+                                                type: text
+                                                position: 2
+                                                key: status
+                                                label: Pimcore
+                                        rows:
+                                            -
+                                                position: 1
+                                                key: project
+                                                label: 'Project Name'
+                                            -
+                                                position: 2
+                                                key: tasks
+                                                label: Tasks
+                                        height: ''
+                                        width: ''
+                                        datatype: data
+                                locked: false
+                                fieldtype: panel
+                                layout: null
+                                border: false
+                                icon: ''
+                                labelWidth: 100
+                                labelAlign: left
+                        locked: false
+                        fieldtype: panel
+                        layout: null
+                        border: false
+                        icon: null
+                        labelWidth: 100
+                        labelAlign: left
+                    default: 0
